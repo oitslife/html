@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            width:400px; height:400px;
+        }
+        #bigbox{
+            background-color: teal;
+            width:400px; height:400px;
+            display: table-cell;
+            vertical-align: middle;
+            display: table;
+        }
+        
+        .box{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .box .item:nth-child(1){
+            width: 100px; height: 100%;
+            background-color: red;
+
+            color:white;
+            font-size: 30px;
+            text-align: center;
+            
+            
+            float:left;
+        }
+        .box .item:nth-child(3){
+            width: 100px; height: 100%;
+            background-color: skyblue;
+
+            color:white;
+            font-size: 30px;
+            text-align: center;
+
+            
+            float:left;
+            
+            
+        }
+        .box .item:nth-child(2){
+            width:200px; height:100%;
+            background-color: yellow;
+
+            color:white;
+            font-size: 200px;
+            text-align: center;
+
+        
+            float:left;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="bigbox">
+        <div class="box">
+            <div class="item">hell</div>
+            <div class="item">vs</div>
+            <div class="item">heaven</div>
+        </div>
+    </div>
+</body>
+</html>

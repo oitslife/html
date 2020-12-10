@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0; margin:0;
+            box-sizing: border-box;
+        }
+        input{
+            width: 208px;
+        }
+        table{
+            text-align: center;
+        }
+        table > tr > td{
+            width:80px;
+        }
+        button{
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+    <h3>calculate</h3>
+    <hr>
+    <input type="text" name="" id="" value="0">
+    <table>
+        <tr>
+            <td><button>back</button></td>
+            <td><button>ce</button></td>
+            <td><button>c</button></td>
+            <td><button>=</button></td>
+        </tr>
+        <tr>
+            <td><button>7</button></td>
+            <td><button>8</button></td>
+            <td><button>9</button></td>
+            <td><button>/</button></td>
+        </tr>
+        <tr>
+            <td><button>4</button></td>
+            <td><button>5</button></td>
+            <td><button>6</button></td>
+            <td><button>*</button></td>
+        </tr>
+        <tr>
+            <td><button>1</button></td>
+            <td><button>2</button></td>
+            <td><button>3</button></td>
+            <td><button>_</button></td>
+        </tr>
+        <tr>
+            <td><button>0</button></td>
+            <td><button>+</button></td>
+            <td><button>none</button></td>
+            <td><button>none</button></td>
+        </tr>
+    </table>
+    <script>
+        
+        const $buttons = document.querySelectorAll('button');
+        const $input = document.querySelector('input');
+
+
+
+        const button_click_f = function(evt){
+            console.log(evt.target.textContent);
+            const btnText = evt.target.textContent;
+            switch(btnText){
+                case "back": //입력된 문자열 중 가장 오른쪽 문자를 하나 삭제한다.
+                    $input.value = $input.value.substr(0,$input.value.length-1);
+                    if ($input.value.length == 0){
+                        $input.value = 0;
+                    }
+                    break;
+                case "ce" : case "c" : //입력된 문자열을 지우고 0으로 바궈준다.
+                    $input.value = 0;
+                    break;
+                case "=" :  //입력된 문자열을 수식 평가하여 입력 필드에 결과를 표시한다. 
+                    $input.value = eval($input.value);
+                    break;
+                case "none":
+                    break;
+                default : //숫자 또는 연산자를 입력 필드에 입력된 문자열의 오른쪽에 추가해준다.
+                    if($input.value == 0){
+                        $input.value = btnText;
+                    }else{
+                        $input.value += btnText;
+                    }
+            }
+        };
+
+        //???밑에 껀 뭐징
+        Array.from($buttons).forEach(function(ele){
+            ele.addEventListener("click", button_click_f, false);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id= 'div1'>hi, welcome!</div>
+    <script>
+        const obj = document.getElementById('div1');
+        //obj.addEventListener('click',f);
+        // obj.onclick = f;
+        // function f(){
+        //     obj.style.backgroundColor = "orchid";
+        // }
+
+        //익명 함수 이용
+
+        // obj.onclick = function(){
+        //     obj.style.backgroundColor = "orchid";
+        // }
+
+        //람다식 이용함.
+        obj.onclick = () => {
+            obj.style.backgroundColor = "orchid";
+        }
+    </script>
+</body>
+</html>

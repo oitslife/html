@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>계산해 봅시다.</h3>
+    <hr>
+    <p>2 + 4 = <span>답</span></p>
+    <p>2 * 20 + 60 = <span>답</span></p>
+    <p>20 / 5 - 9 * 2 = <span>답</span></p>
+
+
+    <script>
+        const $span = document.getElementsByTagName('span');
+        console.log($span);
+        Array.from($span).forEach((ele)=>{
+            ele.addEventListener("click", (evt) =>{
+                console.log(evt);
+                let exp = evt.target.parenElement.textConstent.split('=')[0];
+                let result = eval(exp);
+                evt.target.innerHTML = result;
+        });
+    });
+        
+    </script>
+</body>
+</html>

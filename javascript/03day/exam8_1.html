@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 돔트리</title>
+    <style>
+        b{
+            background-color: green;
+        }
+    </style>
+
+    <!-- <script>
+        window.addEventListener('load',init);
+
+        function init(){
+            const $edu = document.getElementById('edu');
+            const $btn = document.getElementsByClassName("btn")[0];
+            console.log($edu);
+            console.log($btn);
+            $btn.addEventListener("click",function(){
+                console.log('버튼 클릭됨!!');
+                $edu.style.backgroundColor="yellow";
+                $edu.style.color = "write";
+                $edu.style.fontSize = "2em";
+            });
+        }
+        
+    </script> 
+           deffer dom속성은 여기에 있다. bullin 속성-->
+    <script defer src="dom.js"></script>
+    <!--
+        defer : dom 트리 생성 후 js코드 실행
+        async : dom 트리와 병행하여 js코드 실행
+    -->
+</head>
+<body>
+    <b id="edu">울산KH정보교육원</b>
+    <button class='btn'>click</button>
+</body>
+</html>

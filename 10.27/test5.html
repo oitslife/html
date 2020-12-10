@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터 만들기</title>
+    <style>
+        h3:first-letter{color:red;}
+        h3{color:brown}
+        #study{background-color: yellow;}
+        ul{background-color: pink; color: rgb(245, 108, 131);}
+        #id1{color: green;}
+        #id1:hover{color: red; background-color: black; display:block; }
+        #id1:active{color: black; background-color: red; display:block; }
+        #id2{color: blue;}
+        #id3{color: rgb(151, 32, 77);}
+        #ff{color:indianred}
+        
+    </style>
+</head>
+<body>
+    <h3>Web Programming</h3>
+    <hr>
+    <div>2학기 <strong id="study">학습 내용</strong>입니다.</div>
+    <ul>
+        <li><span id="id1">HTML5</span></li>
+        <li><strong id="css"><span id="id2">CSS</span></strong></li>
+        <li><span id="id3">JAVASCRIPT</span></li>
+    </ul>
+    <div id="ff">60점 이하는 F</div>
+
+</body>
+</html>

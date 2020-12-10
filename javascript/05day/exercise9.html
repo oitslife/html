@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>event flow</h3>
+    <hr>
+    <p id= 'p'>이벤트가 어디서 시작되고 어디로 흘러가는 지
+        <strong id='strong'>이벤트 흐름</strong>을
+        아는 것은 매우 중요하다.
+    </p>
+    <script>
+        // let strong = document.getElementById('strong');
+        // let p = document.getElementById('p');
+        // strong.onclick = () => {
+        //     alert('strong + 이벤트 흐름');
+        // }
+        // p.addEventListener('click',()=>{
+        //     alert('p + 이벤트 흐름');
+        // },true);
+        
+        //값을 반환 받아서 출력하는 방법 내가 한 것은 직접 손으로 적어 놓았던 것..
+        const $strong = document.getElementById('strong');
+        $strong.onclick = function(evt){
+            console.log(evt);
+            window.alert(`${evt.target.localName}+${evt.target.textContent}`);
+        };
+
+        const $p = document.getElementById('p');
+        
+        $p.addEventListener('click',function(evt){
+            //window.alert(`${evt.target.localName}+${evt.target.querySelector('strong').textContent}`);
+              window.alert(`${this.localName}+${this.children[0].textContent}`);
+        },true);
+
+    </script>
+</body>
+</html>

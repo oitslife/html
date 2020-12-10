@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제10번</title>
+    <script src="practice10.js"></script>
+</head>
+<body>
+    <h3>book 객체 배열 만들기</h3>
+    <hr>
+    <script>
+            for(let i=0; i<bookArray.length; i++){
+                document.write(bookArray[i].title + ",");
+                document.write(bookArray[i].authro + ",");
+                document.write(bookArray[i].price+"<br>");
+            }
+    </script>
+    <hr>
+    <script>
+        document.writeln("가장 비싼 책은 "+max(bookArray).title);
+        
+    </script>
+</body>
+</html>

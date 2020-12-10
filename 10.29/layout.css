@@ -1,0 +1,103 @@
+        *{margin:0; padding:0;}
+        
+        html, body{width:100%;}
+
+        /* 최상단 네비입니다 */
+        .uppernav{
+            width:100%;
+            height:30px;
+            background-color: #492378;
+        }
+        .uppernav1{
+            width:70%;
+            height:30px;
+            margin:0 auto;
+            background-color: red;
+        }
+
+        /* 헤더 부분입니다. */
+        .header{
+            width:100%;
+            height: 140px;
+            background-color: #7638C2;
+        }
+        .header1{
+            width:70%;
+            height: 140px;
+            margin:0 auto;
+            background-color: rosybrown;
+            background-image: url("data:image/jpeg;base64,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");
+            background-position:center;
+            background-size: 100%;
+        }
+
+        /* 네비 부분입니다 */
+        .nav{
+            width:100%;
+            height: 30px;
+            background-color: #9C4AFF;
+        }
+        .nav1{
+            width:70%;
+            height: 30px;
+            margin: 0 auto;
+            background-color: salmon;
+        }
+
+        /* 메인 부분입니다 */
+        .main{
+            width:100%;
+            height: 300px;
+            background-color: white;
+        }
+        .main1{
+            width:70%;
+            height: 300px;
+            background-color: yellow;
+            margin: 0 auto;
+        }
+        .aside{
+            width:60%;
+            height: 300px;
+            background-color: slateblue;
+            float:left;
+        }
+        .section{
+            width:20%;
+            height: 300px;
+            background-color:tomato;
+            float:left;
+        }
+        .section1{
+            width:20%;
+            height: 300px;
+            background-color:red;
+            float:left;
+        }
+        /* 아래 메뉴 부분입니다 */
+        .footermenu{
+            width:100%;
+            height: 30px;
+            background-color: #8217CC;
+        }
+        .footermenu1{
+            width:70%;
+            height: 30px;
+            background-color: teal;
+            margin: 0 auto;
+        }
+        /* 바닥 부분입니다 */
+        .footer{
+            width:100%;
+            height: 140px;
+            background-color: #C169FF;
+        }
+        .footer1{
+            width:70%;
+            height: 140px;
+            background-color: yellowgreen;
+            margin:0 auto;
+        }
+
+        /* 글자 중앙 배치 */
+        .uppernav1, .header1, .nav1, .main1, .aside, .section, section1, .footermenu1, .footer1{text-align: center;}

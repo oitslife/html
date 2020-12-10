@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv"></div>
+    <!-- <span>hello</span> -->
+    <script>
+        // 1. 넣을 곳을 찾는다.
+        const $myDiv = document.getElementById('myDiv');
+        const $span = document.createElement('span');
+        $span.innerHTML = 'hello';
+        $span.style.backgroundColor="red";
+        $span.style.color="white";
+        $span.style.fontSize="2em";
+        $span.addEventListener("click",function(){
+            $span.style.color='black';
+        });
+
+        $span.setAttribute("id", "hi");
+        $myDiv.appendChild($span);
+
+        
+    </script>
+</body>
+</html>

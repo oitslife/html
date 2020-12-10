@@ -1,0 +1,24 @@
+        *{margin:0; padding:0;}
+        html, body{width:100%;}
+        li{list-style: none;}
+        .upperbar{background-color: black; width: 100%; height:50px;}
+        .box{background-color: black; width:600px; height:50px;margin:0 auto;}
+        .login{color: white; margin-top:10px; text-align: center; padding: 5px; font-size: 0.8rem; float:right; text-decoration: none;}
+        header{height: 150px; width:600px; margin:0 auto;}
+        .header1{height: 150px; width:600px; margin:0 auto; background-image:url('girl-5662873_640.jpg'); background-size: 600px 150px;}
+        .nav{width:600px; height: 50px; margin:0 auto;}
+        .nav ul{display: table; margin:0; padding: 0; width: 600px; height: 50px; background-color: black;}
+        .nav ul li{ display: inline-block; text-decoration: none; display: table-cell; vertical-align: middle; text-align: center; padding: 15px; margin:0.3px; font-size: 0.8rem; font-weight: bold;}
+        .li{font-weight: bold; padding:0.3px;}
+        .nav ul li a{color: white; font-size: 0.8rem; text-decoration: none; font-weight: bold;}
+        .nav ul li a:hover{text-decoration:underline;}
+        .big{background-color: red; width:600px; height:500px; margin:0 auto;}
+        .leftaside{background-color:lightskyblue; width:20%; height:500px; float:left;}
+        .rightside{background-color:lightcyan; width:80%; height:500px; display:inline-block; }
+        .table{background-color: white; margin:0 auto; width:250px;}
+        .table1{text-align: left; margin: 10px; font-size: 13px;}
+        #name{text-align: center; margin:10px; letter-spacing: 0.5em;}
+        #button{border:0px; background-color: green; color: white; width:100%; height: 30px; padding:5px;margin: 0 auto;}
+        footer{display:table; background-color: gray; font-size: 0.8rem; color:white; width:600px; height: 70px; margin:0 auto; text-align: center;;}
+        #span{display: table-cell; vertical-align: middle;}
+        #box{width:98%; margin:2px;}

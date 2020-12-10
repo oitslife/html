@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{height: 100%;}
+        body{background-color:black; 
+            text-align: center;  
+            color: red; 
+            border:0px solid red;
+            height: 100%;
+            margin:0;
+            }
+        header, nav, article, aside, footer{background-color:lightblue;}
+        section{background-color: steelblue;}
+        
+        header.realhead{height:15%; margin:0.5%;}
+        nav{float:left; width:25%; height:60%; background-color: orange; margin:0.5%;}
+        section{float:left; width:48%; height:60%;margin-top:0.5%; margin-bottom:0.5%;}
+        aside{float:left; width:25%; height:60%; background-color: purple;margin:0.5%;}
+        footer.bottom{clear: both; height:15%; background-color: blue; margin:0.5%;}
+        /* span{padding: 10px;} */
+        section> header{height: 20%; margin:3%;}
+        section> article{height: 30%; margin:3%;}
+        section> footer{height: 20%; margin:3%;}
+    </style>
+</head>
+<body>
+    <header class="realhead">header</header>
+    <nav>nav</nav>
+    <section>
+        section
+        <header><span>header</span></header>
+        <article>article</article>
+        <footer>footer</footer>
+    </section>
+    <aside>aside</aside>
+    <footer class="bottom">footer</footer>
+</body>
+</html>

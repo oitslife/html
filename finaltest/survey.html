@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소프트웨어 기술</title>
+    <style>
+        html, body{background-color: aliceblue;}
+        h2{text-align: center;}
+        #mention{text-align: left;}
+        ul{list-style:none; padding-left: 4px;}
+        #lastmention{width:300px; height:150px; text-align:left;}
+        section{background-color: pink;}
+        ul{margin-left: 6px;}
+        span{color: blue;}
+    </style>
+</head>
+<body>
+    <header>
+        <h2>설문지</h2>
+        <div id="mention">소프트웨어 기술에 대한 의견을 듣습니다. 많은 참가 바랍니다.</div>
+    </header>
+    <hr>
+    <section>
+        <ul>
+            <li><span>학년 </span>
+                <input type="radio" name="grade">1학년
+                <input type="radio" name="grade">2학년
+                <input type="radio" name="grade">3학년
+                <input type="radio" name="grade">4학년 <br><br>
+            <li><span>성별</span>
+                <input type="radio" name="gender">남
+                <input type="radio" name="gender">여 <br><br>
+            <li><span>관심 분야</span>
+                <input type="text" list="section">
+                <datalist id="section">
+                    <option value="모바일 소프트웨어"></option>
+                    <option value="모바일"></option>
+                    <option value="소프트웨어"></option>
+                    <option value="일 소프"></option> <br><br>
+                </datalist> <br><br>
+            <li><span>진로</span>
+                <input type="checkbox" name="road">개발
+                <input type="checkbox" name="road">기획
+                <input type="checkbox" name="road">영업
+                <input type="checkbox" name="road">창업 <br><br>
+
+            <li>남기고 싶은 말 <br>
+                <input type="text" value="글을 남겨주세요" id="lastmention">
+        </ul>
+    </section>
+    <footer>
+        <div>Copyright 2017 by Kitae</div>
+    </footer>
+</body>
+</html>

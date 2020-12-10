@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(){
+            var span = document.getElementById("mySpan");
+            span.style.color = "green";
+            span.style.fontSize = "30px";
+            span.style.display = "block";
+            span.style.width = "6em";
+            span.style.border = "3px dotted magenta";
+            span.style.margin = "20px";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>ccss 스타일 동적 변경</h3>
+    <hr>
+    <p style="color:blue"> 
+        <span id="mySpan" style ="red">
+            문장입니다.
+        </span>
+    </p>
+    <input type="button" value="스타일변경" onclick="change()"> //누르면 발동되게 만들었넹
+</body>
+</html>

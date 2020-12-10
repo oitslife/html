@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{display: inline-block;
+            height:50px;
+            width:50px;
+            border:1px solid lightgray;
+            text-align: center;
+            color:white;
+            background-color: red;}
+        #down:hover{position:relative;
+            left:20px;
+            top:20px;
+            background-color: green;}
+        #up:hover{
+            position:relative;
+            right:20px;
+            bottom:20px;
+            background-color: green;
+        }
+
+        #click:hover{background-color: green; 
+        position: relative;
+        left: 80px;
+        top: 90px;}
+    </style>
+</head>
+<body>
+    <h3>절대 클릭하지 마시오.</h3>
+    <hr>
+    <div>T</div>
+    <div id="down">H</div>
+    <div>a</div>
+    <div>n</div>
+    <div id="up">k</div>
+    <div>s</div>
+    <hr>
+    <input type="text" id="click">
+</body>
+</html>

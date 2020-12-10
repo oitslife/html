@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{background-color: black; color: red; width: 100%; height: 100%; text-align: center;}
+        header, nav, aside, footer, article{background-color: skyblue; border:0px;}
+        section{background-color: darkcyan;}
+        header{width: 10%; height: 10%; width: 100%;}
+        nav{width: 10%; width: 100%; height: 10%;}
+        .section1{ width: 60%; height: 30%; float:left;}
+        article{border: 1px solid red;width: 38%; height:20%; float:left}
+        .section2{width: 60%; height: 40%; float:left;}
+        section>footer{margin-top: 20%;}
+        aside{border:1px solid red; width: 38%; height:39%; float:left;}
+        .realfooter{clear:left;}
+        .inheader{margin-top: 5%;}
+        p{margin-top: 10%;}
+
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <section class="section1">section1</section>
+    <article>article</article>
+    <section class="section2">
+        <header class="inheader">header</header>
+        <p>section2</p>
+        <footer>footer</footer>
+    </section>
+    <aside>aside</aside>
+    <footer class="realfooter">footer</footer>
+
+</body>
+</html>
