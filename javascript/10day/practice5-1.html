@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+      padding: 10px;
+    }
+    div.col{
+      display: inline-block;
+      width:200px;
+      border: 1px solid lightblue;
+    }
+  </style>
+</head>
+<body>
+  <h3>여행갑시다</h3>
+  <hr>
+  <div class="col">
+    <ul>
+      <li>도시를 선택하세요</li>
+      <li>
+        <select name="" id="city">
+          <option value="pari">파리</option>
+          <option value="newyork">뉴욕</option>
+          <option value="lundon">런던</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <ul>
+      <li>음식을 선택하세요</li>
+      <li>
+        <select name="" id="food">
+          <option value="hamburger">햄버거</option>
+          <option value="coffee">에스프레소 커피</option>
+          <option value="cake">치즈케익</option>
+        </select>
+      </li>
+    </ul>
+  </div>
+  <script>
+    const $selects = document.querySelectorAll('ul>li>select');
+    Array.from($selects).forEach(function(ele){
+      ele.size = ele.childElementCount;
+    });
+    Array.from($selects).forEach(function(ele){
+      ele.addEventListener("change",function(evt){
+        // console.log(evt.target.id);
+        let key = evt.target.id;
+        let value = evt.target.options[evt.target.selectedIndex].textContent;
+
+        localStorage.setItem(key,value);
+
+      },false);
+    });
+  </script>
+</body>
+</html> 

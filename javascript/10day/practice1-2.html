@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>이름으로 학번 검색</h3>
+    <hr>
+    <!-- <form action='#'> -->
+        <ul>
+            <li><label for='name'>검색할 이름</label><input type="text" id='name'></li>
+            <li><label for='number'>검색된 학번</label><input type="text" id='number' readonly>
+                <button>스토리지에 검색</button></li>
+        </ul>
+    <!-- </form> -->
+    <p><a href="practice1-1.html">이름으로 학번 저장 페이지로 이동합니다.</a></p>
+    <script>
+        
+
+        const $button = document.querySelector('button');
+        const $name = document.getElementById('name');
+        const $number = document.getElementById('number');
+        $name.addEventListener('keyup',(evt)=>{
+            if(evt.key == 'Enter'){
+            search(evt);  
+            }
+        });
+
+        $button = addEventListener('click', search);
+        function search(evt){
+            const numValue = window.sessionStorage.getItem($name.value);
+            number.value = numValue;
+        }
+    </script>
+</body>
+</html>

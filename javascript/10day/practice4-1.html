@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+    }
+    ul > li > span#today{
+      margin-left:5px;
+    }
+  </style>
+</head>
+<body>
+  <h3>일기쓰기</h3>
+  <hr>
+  <ul>
+    <li>날짜 시간</li>
+    <li><textarea name="" id="" cols="30" rows="10"></textarea> </li>
+    <li><button>저장</button><button>보기</button></li>
+    <li><span>오늘</span><span id="today"></span></li>
+    <li><textarea id="diary" cols="30" rows="10"></textarea></li>
+    <li><button id="btn-save">저장</button><button id="btn-view">보기</button></li>
+  </ul>
+  <script>
+    const today = new Date().toLocaleDateString().replaceAll(' ','');
+    document.getElementById('today').textContent = today;
+
+    //저장버튼 클릭
+    document.getElementById('btn-save').addEventListener("click",(evt)=>{
+      //console.log(evt);
+      localStorage.setItem(
+        document.getElementById('today').textContent,
+        document.getElementById('diary').value,
+      );
+    },false);
+
+    //보기버튼 클릭
+    document.getElementById('btn-view').addEventListener("click",(evt)=>{
+      //console.log(evt);
+      window.open("practice4-2.html","_blank","top=100,left=100,width=800,height=400");      
+    },false);
+  </script>
+</body>
+</html>

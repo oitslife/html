@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+      border:1px solid lightblue;
+      padding:10px;
+    }
+  </style>
+</head>
+<body>
+  <h3>선택한 도시와 음식 보여주기</h3>
+  <hr>
+  <ul id="list"></ul>
+
+  <script>
+    window.addEventListener("storage",list,false);
+    function list(){
+      document.getElementById('list').textContent = '';
+      for(let i=0; i<localStorage.length; i++){
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+        let keyValue = `${key}=${value}`;
+
+        const $li = document.createElement('li');
+        $li.textContent = keyValue;
+
+        document.getElementById('list').appendChild($li);
+      }
+    }
+    list();
+  </script>
+</body>
+</html> 

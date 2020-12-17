@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>학번과 이름을 입력해서 찾아보시오</h3>
+    <hr>
+    <form action="#">
+        <div>이름<input type="text" id='name'></div>
+        <div>번호<input type="text" id='number'><input type="button" id='enter' value='enter'></div>
+    </form>
+    <script>
+        const $name = document.getElementById('name');
+        const $number = document.getElementById('number');
+        const $button = document.getElementById('enter');
+       
+        $button.addEventListener('click', (evt)=>{
+            console.log(evt);
+            console.log(`이름은 ${$name.value}이고`);
+            console.log(`번호은 ${$number.value}이고`);
+            const aaa = window.sessionStorage.getItem($name.value);
+            $number.value = aaa;
+        });
+    </script>
+</body>
+</html>

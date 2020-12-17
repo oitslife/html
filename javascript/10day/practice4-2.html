@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+      padding:10px;
+      background-color: lightgreen;
+    }
+    ul li {
+      line-height: 1.8em;
+    }
+    ul li span.num{
+      margin-right:10px;
+      border:1px solid;
+    }
+    ul li span.key{
+      margin-right:10px;
+      font-weight: bold;
+      text-align: center;
+      /* background-color: lightgreen; */
+    }
+    ul li span.value{
+
+    }
+  </style>
+</head>
+<body>
+
+  <h3>일기 보기</h3>
+  <hr>
+  <ul>
+    <script>
+      let cnt = 0;
+      for(let i=0; i<localStorage.length; i++){
+        //키값 얻어오기
+        let key = localStorage.key(i);
+
+        //키값이 정규표현식과 체크해서 날짜패턴이면
+        const regExp = /\d{4}.\d{2}.\d{2}./;
+        if(!regExp.test(key)) continue;
+
+        let value = localStorage.getItem(key);
+        document.write("<li>");
+        document.write("<span class='num'>" + (++cnt) + ".</span>");          
+        document.write("<span class='key'>"+key+"</span>");
+        document.write("<span class='value'>"+value+"</span>");
+        document.write("</li>");
+      }
+    </script>
+  </ul>
+</body>
+</html>
+</html> 

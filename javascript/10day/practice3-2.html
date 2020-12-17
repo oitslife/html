@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol{
+            padding-left: 15px;
+        }
+        ol li span.num{
+            background-color: red;
+            border:2px solid;
+        }
+        ol li span.key{
+            margin-right: 10px;
+            background-color: lightgreen;
+            text-align: center;
+        }
+        ol li span.value{
+            margin-right: 10px;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <h3>포스트잇 출력</h3>
+    <hr>
+    <!-- table 형식으로 나타낼 수 있을까? -->
+    <ol>
+    <script>
+        for(let i=0; i<localStorage.length; i++){
+            let key = localStorage.key(i);
+            let value = localStorage.getItem(key);
+            console.log(key,value);
+            document.write('<li>');
+            document.write("<span class='num'>"+(i+1)+'</span>');
+            document.write("<span class='key'>"+key+'</span>');
+            document.write("<span class='value'>"+value+'</span>');
+            document.write('</li>');
+        }
+    </script>
+    </ol>
+</body>
+</html>

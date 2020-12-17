@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>학번과 이름</h3>
+    <hr>
+    <form action='#'>
+        <ul>
+            <li><label for='name'>  이름</label><input type="text" id='name'></li>
+            <li><label for='number'>학번</label><input type="text" id='number'>
+                <button>스토리지에 저장</button></li>
+        </ul>
+    </form>
+    <p><a href="practice1-2.html">이름으로 학번 검색 페이지로 이동합니다.</a></p>
+    <script>
+        const $button = document.querySelector('button');
+        $button.addEventListener('click', (evt)=>{
+            console.log(evt);
+            window.sessionStorage.setItem(
+                document.getElementById('name').value, 
+                document.getElementById('number').value);
+            
+        });
+    </script>
+</body>
+</html>
