@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>웹 사이트 접속</h3>
+    <hr>
+    <select name="" id="select">
+        <option value="https://www.naver.com">네이버</option>
+        <option value="https://www.google.com">구글</option>
+        <option value="https://papago.naver.com/">파파고</option>
+    </select>
+    <script>
+        let select = document.getElementById('select');
+        function change(evt){
+            window.location = select.options[select.selectedIndex].value;
+            //window.location은 새로운 창을 연다. 
+            //select.options는 변수의 옵션들 중 이라는 뜻이고,
+            //select.selectedIndex는 사용자가 선택한 (option) 인덱스이다.
+            //.value는 그 값을 보여준다.
+        }
+        select.addEventListener('change', change);
+    </script>
+</body>
+</html>

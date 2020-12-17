@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            background-color: lightslategray;
+        }
+    </style>
+    <script>
+        //이미 올라간 시점을 전제로해서 함수를 작성해보자.
+        let timer = null;
+        function mouseOver(evt){
+            console.log('올라가있음');
+            console.log(timer);
+            timer = setTimeout("window.open('http://www.naver.com')",3000);
+            console.log(timer);
+        }
+        function mouseOut(evt){
+            console.log('내려가 버렸음');
+            if(timer != null){
+                clearTimeout(timer);
+                console.log(timer);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>이미지에 맘우스를 올리고 3초만 기다리면 사이트로 이동합니다.</h3>
+    <hr>
+    <div onmouseover="mouseOver()" onmouseout="mouseOut()">그림 대용</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>옵션 선택으로 사이트 접속</h3>
+    <hr>
+    <div>접속할 사이트</div>
+    <select name="" id="select">
+        <option value="https://www.naver.com/">네이버</option>
+        <option value="https://www.google.com/">구글</option>
+        <option value="https://www.10000recipe.com/">만개의 레시피</option>
+    </select>
+
+    <script>
+        let $select = document.getElementById('select');
+        $select.addEventListener('select', (e)=>{
+            console.log(e.target);
+        });
+    </script>
+</body>
+</html>

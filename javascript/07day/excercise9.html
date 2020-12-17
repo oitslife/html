@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum=0;
+        function f(){
+            sum++;
+            if(sum ==10) clearInterval(id);
+        }
+        let id = setInterval("f()",2);
+        console.log(id);
+    </script>
+</body>
+</html>

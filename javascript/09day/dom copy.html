@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>버킷리스트?</h3>
+    <hr>
+    <ul id='fruits'>
+        <li id='apple'>apple</li>
+        <li id='banana'>banana</li>
+        <li id='orange'>orange</li>
+        <li id='grape'>grape<button>수정</button></li>
+    </ul>
+    
+    <script>
+    //textContent : 컨텐츠 내에서 하위 요소를 포함해서 모든 텍스트를 읽어오거나, 변경할 때 
+    //innerHtml : 컨텐츠 내에서 하위 요소를 포함해서 모든 내용(텍스트, 요소)을 읽어오거나, 변경할 때 
+
+    console.log(document.getElementById('grape').textContent);
+    console.log(document.getElementById('grape').innerHTML);
+
+    //안에 중첩된 요소가 있다면 밑에 방식으로 찾아서 사용하면 편하게 할 수 있다.
+    console.log(document.getElementById('grape').firstChild.nodeValue);
+
+    console.log(document.getElementById('grape').textContent='mellon');
+        
+    console.log(document.getElementById('grape').innerHTML='text');
+    
+
+    </script>
+</body>
+</html>

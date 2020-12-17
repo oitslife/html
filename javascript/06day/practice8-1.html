@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload=''>
+    <h3>아이템을 클릭하면 1.3배 크기로</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li>자전거로</li>
+        <li>책 100권</li>
+        <li>철인 3종</li>
+        <li>자바스크립트</li>
+    </ul>
+
+    <script>
+        //$preEle는 뭐지??
+        let $preEle = null;
+        window.addEventListener("click", function (evt) {
+            console.log(evt.target.tagName);
+
+            //evt.target.tagName 이 'LI'인것만 해서 크기를 증가시킨다.
+            if (evt.target.tagName == 'LI') {
+                evt.target.style.fontSize = '1.3em';
+            }
+
+            //이전 li요소의 폰트 사이즈
+            if ($preEle != null) {
+                $preEle.style.fontSize = '1em';
+            }
+            
+            //이벤트가 발생한 li요소 저장해두기
+            $preEle = evt.target;
+        }, false);
+    </script>
+</body>
+
+</html>

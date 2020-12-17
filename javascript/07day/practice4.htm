@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init(evt) {
+            if(navigator.userAgent.indexOf("Chrome") != -1 &&
+               navigator.vender == "Google Inc."){
+                alert('구글 chrome 브라우저');
+            }else{
+                alert('구글 chrome 브라우저 아님ddfdfdf');
+            }
+
+        } 
+        window.addEventListener('load',init);
+    </script>
+</head>
+<body>
+    <h3>구글 브라우저 감별</h3>
+    <hr>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque harum quae deserunt totam nulla tempora aperiam minus asperiores autem, voluptate reprehenderit eveniet accusamus. Nobis ipsam suscipit sed aliquid. Laborum, fugiat!
+</body>
+</html>

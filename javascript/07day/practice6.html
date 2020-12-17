@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: lightsalmon;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h3>div 태그에 시계 만들기</h3>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, quasi debitis. Temporibus sequi error nobis dicta deleniti dolore optio architecto dignissimos itaque voluptates, totam natus iste eum cum reprehenderit aspernatur.
+    <hr>
+    <div>
+        &nbsp;
+    </div>
+    <script>
+        let $div = '';
+        let interval = '';
+
+        function clock(evt) {
+            function getTime(params) {
+                const currentTime = new Date();
+                console.log(currentTime);
+                const localTimeStr = currentTime.toLocaleTimeString();
+                $div.textContent = localTimeStr;
+                
+            }
+            if(interval == ''){
+                interval = setInterval(getTime,1000);
+                console.log(interval);
+            }else{
+                clearInterval(interval);
+                interval='';
+                console.log(interval);
+            }
+            //console.log(interval);
+        }
+        
+        function init(evt){
+            const $div = document.querySelector('div');
+            $div.addEventListener('click',clock)
+        }
+        window.addEventListener('load',init);
+    </script>
+</body>
+</html>

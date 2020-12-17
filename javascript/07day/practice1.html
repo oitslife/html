@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>HTML5</h3>
+    <hr>
+    <p>
+        html을 학습하는 사이트입니다.
+        여기서 ~~~를 배울 ㅅ ㅜ잇습니다.
+
+    </p>
+    <script>
+        function init(){
+            win = window.open('sample.html','small browser','width=200px, height=80px');
+            win.document.write('ddd');
+            win.document.body.style.backgroundColor = 'red';
+            win.document.title='환영';
+        }
+        window.addEventListener('load',init);
+    </script>
+</body>
+</html>

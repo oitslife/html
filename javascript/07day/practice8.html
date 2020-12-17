@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load',init);
+        function init(evt) {
+            const $button = document.querySelector('button');
+            $button.addEventListener('click', score);
+        }
+        function score(evt) {
+            const $questions = document.querySelectorAll('table tr>td:nth-child(1)');
+            const $answers = document.querySelectorAll('table tr>td:nth-child(2)>input');
+
+            const $answersArr = Array.from($answers);
+
+            let rightCount = 0;
+            Array.from($questions).forEach(function(ele,idx){
+                if(eval(ele.textContent) == $$answersArr[idx]){
+                    ++rightCount;
+                }else{
+                    ele.style.textDecoration = 'line-throught';
+                }
+            });
+            const $rightCount = document.querySelector('table tr:nth-child(5)>td:nth-child(2)');
+            $rightCount.textContent = rightCount;
+        }
+    </script>
+</head>
+<body>
+    <h3>have a math problem</h3>
+    시숙을 계산 답 입력 버튼 클릭
+    <hr>
+
+    <table>
+        <tr>
+            <td>5*6</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>7+2</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>1+2</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>66+1</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value = '채점'></td>
+            <td></td>
+            <td><input type="button" value = '다시'></td>
+        </tr>
+    </table>
+</body>
+</html>

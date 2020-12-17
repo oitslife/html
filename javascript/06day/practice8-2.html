@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //시작하면 바로 window 생성한다.
+        window.addEventListener("load", init, false);
+        function init() {
+            const $lis = document.querySelectorAll('li');
+            //console.log($lis);
+            //console.log(Array.from($lis));
+            
+            //배열을 만들어준다. - 조작을 쉽게 하기 위해서 배열로 변환한다.
+            Array.from($lis).forEach(function(ele){
+                ele.addEventListener("click",function(evt){
+                    //탐색한 모든 li요소의 폰트 사이즈 1em반영
+                    Array.from($lis).forEach(function(ele){
+                        ele.style.fontSize = '1em';
+                    });
+                    
+                    //클릭된 li요소의 폰트사이트 1.3em반영
+                    evt.target.style.fontSize = '1.3em';
+                }, false);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h3>아이템을 클릭하면 1.3배 크기로</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li>자전거로</li>
+        <li>책 100권</li>
+        <li>철인 3종</li>
+        <li>자바스크립트</li>
+    </ul>
+
+</body>
+
+</html>

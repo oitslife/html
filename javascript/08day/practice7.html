@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>산수 문제를 풀어봅시다</h3>
+    자동을 문제가 만들어 집니다.
+    <hr>
+    <table>
+        <tr>
+            <td class='question'>4+5</td><td><input type="text" class='input'></td>
+        </tr>
+        <tr>
+            <td class='question'>4-2</td><td><input type="text" class='input'></td>
+        </tr>
+        <tr>
+            <td class='question'>8+5</td><td><input type="text" class='input'></td>
+        </tr>
+        <tr>
+            <td class='question'>4*5</td><td><input type="text" class='input'></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><input type="button" id='score' value='채점'></td>  <td>2</td>
+        </tr>
+    </table>
+    <script>
+        let sum = null;
+        let $table = document.querySelector('table');
+        let $tr = document.querySelectorAll('tr');
+
+        //정답 출력함.
+        // for(let i=0; i<$tr.length; i++){
+        //     sum = $tr[i].textContent;
+        //     console.log(eval(sum));
+        // }
+
+        //정답을 입력하면 받는 기능
+        let $input = document.querySelectorAll('.input');
+        for(let i=0; i<$input.length; i++){
+            console.log($input.textContent);
+            let answer = $input[i].value;
+            if(answer == "" || isNaN(answer)){
+                console.log('노 답!');
+            }
+            else if(palse(answer) != $input){
+                console.log('틀린 답!');
+            }else{
+                console.log('정답!');
+            }
+        }
+        
+        //복수는 addeventListner이 안붙나???
+        // for(let i=0; i<$input.length; i++){
+        //     console.log(`이것은 ${$input[i].textContent}이 가격 입니다.`);
+        // }
+
+
+
+        //버튼을 누르면 채점하는 기능
+
+        //맞을 갯수를 밑에 띄워주는 기능
+
+        //채점해서 틀리면 해당 문제에다가 줄을 긋는 기능
+
+    </script>
+</body>
+</html>

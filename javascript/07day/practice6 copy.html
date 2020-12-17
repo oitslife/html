@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            background-color: lightseagreen;
+        }
+    </style>
+    <script>
+        function init(evt) {
+            let a = setInterval(console.log(new Date()),1000);
+            console.log(a);
+        }
+        window.addEventListener('load',init);
+    </script>
+</head>
+<body>
+    <h3>div 태그에 시계 만들기</h3>
+    <hr>
+    <div>
+        &nbsp;
+    </div>
+</body>
+</html>

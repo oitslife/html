@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>버킷리스트?</h3>
+    <hr>
+    <ul id='fruits'>
+        <li id='apple'>apple</li>
+        <li id='banana'>banana</li>
+        <li id='orange'>orange</li>
+        <!-- <li id='grape'>grape<button>수정</button></li> -->
+    </ul>
+    
+    <script>
+        //li요소 만들어 붙이기
+        const $li = document.createElement('li');
+        const $grapeText = document.createTextNode('grape');
+        const $id = document.createAttribute('id');
+
+        const $button = document.createElement('button');
+        const $correctionButton = document.createTextNode('수정');
+
+        $id.value = 'grape';
+        $li.setAttributeNode($id);
+        $li.append($grapeText);
+
+        
+        $button.append($correctionButton);
+
+
+
+        $fruits.appendChild($li);
+
+        document.getElementById('grape').appendChild($button);
+        $button.appendChild($button2);
+
+        let $button2 = $button.cloneNode();
+
+        $button2 = $button.cloneNode(true);
+
+    </script>
+</body>
+</html>

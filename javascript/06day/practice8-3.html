@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //시작하면 바로 window 생성한다.
+        const click_ul_f = (evt) => {
+            console.log(evt);
+            console.log(evt.target); //이벤트가 감지된 요소
+            console.log(evt.currentTarget); //이벤트 리스너를 등록한 요소
+
+            //이벤트리스너를 등록한 하위 요소 li를 찾아 폰트 사이즈를 1em으로 바꿔준다.
+            const $lis = evt.evt.currentTarget.querySelectorAll('li');
+            Array.from($lis).forEach((ele) => {
+                ele.style.fontSize = '1em';
+            })
+            evt.target.style.fontSize = '1.3em';
+        }
+        const init = () => {
+            const $ul = document.querySelector('ul');
+            $ul.addEventListener('click', click_ul_f, false);
+        }
+        window.addEventListener("load", init, false);
+    </script>
+</head>
+
+<body>
+    <h3>아이템을 클릭하면 1.3배 크기로</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li>자전거로</li>
+        <li>책 100권</li>
+        <li>철인 3종</li>
+        <li>자바스크립트</li>
+    </ul>
+
+</body>
+
+</html>

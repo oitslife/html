@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load',init);
+        function init(){
+            const $btn_writeBucket = document.getElementById('btn_writeBucket');
+            const $ul = document.getElementById('ul');
+
+            const $li = document.createElement('li');
+
+            $btn_writeBucket.addEventListener('click', btn_writeBucket);
+        }
+        function btn_writeBucket(){
+            const $in_t_bucket=document.getElementById('in_t_bucket');
+            const $li = document.createElement('li');
+
+            const $p = document.createElement('p');
+            $p.appendChild(createTextNode($in_t_bucket.value));
+
+
+            const $btn_modify = document.createElement('button');
+            $btn_modify.appendChild(createTextNode('수정'));
+
+            $btn_modify
+
+            const $btn_delete = document.createElement('button');
+            $btn_delete.appendChild(createTextNode('삭제'));
+
+            $li.appendChild($p);
+            $p.appendChild($btn_modify);
+            $p.appendChild($btn_delete);
+        
+            
+        }
+
+
+        //삭제
+        function btn_delete_f(evt){
+            const $ul = evt.target.closest('ul');
+            const $il = evt.target.closest('li');
+            $ul.removeChild()
+        }
+        //수정
+
+    </script>
+</head>
+<body>
+    <input type='text' id="in_t_bucket"><button id='btn_writeBucket'>등록</button>
+    <ul id='bucketList'>
+        <p>목록1<button>수정</button><button>삭제</button></p>
+    </ul>
+</body>
+</html>

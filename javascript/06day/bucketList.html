@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <h3>~버킷리스트~</h3>
+    <hr>
+    <input type="text"><button>등록</button>
+    <ul>
+    </ul>
+    <script>
+        const $button = document.querySelector('button');
+        const $ul = document.querySelector('ul');
+        const $input = document.querySelector('input');
+
+        //버튼 클릭하면 li 요소를 추가하도록 만들려고 했는데 안된다. => 된다.
+        //이제 추가된 요소에 input창의 값을 넣어주려고 하는데 안된다. => value로 간단하게 할 수 있다.
+        //다음으로는 input에 적힌 값이 사라지도록 만들어야 한다 => 된다.
+        //또 값이 없다면 출력이 안되게 해야하는데 안된다. => 된다
+        //삭제 버튼이 활성화 되도록 하자. - 어떻게 저거 잡지??
+
+
+        //버튼을 누르면 input에 있는 값이 밑에 생성된다. 만약 입력이 없다면 
+        //경고창이 뜨면서 다시 입력을 기다린다.
+        $button.addEventListener('click', () => {
+
+            console.log($input.value);
+            if($input.value == ''){
+                alert('ddddddd');
+            }else{
+
+                let li_list = document.createElement('li');
+                li_list.appendChild(document.createTextNode(`${$input.value} `));
+                $ul.appendChild(li_list);
+                //li에 버튼넣기전에 버튼에 속성값 넣어주는 코드한줄 더넣어바
+                //setAttribute("style","margin-left: 50px;)
+                let button_c = document.createElement('button');
+                button_c.appendChild(document.createTextNode('수정'));
+                li_list.appendChild(button_c);
+    
+                let button_d = document.createElement('button');
+                button_d.appendChild(document.createTextNode('삭제'));
+                li_list.appendChild(button_d);
+                
+            }
+            //input을 초기화해준다.
+            $input.value = '';
+        });
+
+        $button_c.addEventListener('click',()=>{
+
+        });
+        const $button_d = document.getElementsByTagName($ul.childNodes);
+      
+        $button_d.addEventListener('click',()=>{
+            console.log('버튼 클릭됨');
+        });
+
+    </script>
+</body>
+
+</html>
