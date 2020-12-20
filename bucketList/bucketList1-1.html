@@ -1,0 +1,48 @@
+<!-- 
+1. 버킷 생성, 추가, 이동
+2. storage 기술을 이요해서 오프라인 중에도 버킷 내용이 유지되도록 하기
+3. style 추가는 선택사항..!
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         ul{
+             padding-left: 0px;
+             list-style-type: none;
+         }
+     </style>
+ </head>
+ <body>
+     <ul id='bucketList'></ul>
+    <input type="text">
+     <script>
+         
+         const $bucketList = document.getElementById('bucketList');
+         for(let i=0; i<localStorage.length; i++){
+             let key = localStorage.key(i);
+             console.log(key);
+             let value = localStorage.getItem(key);
+             console.log(value);
+             
+             //li요소를 만들어내고
+             const $li = document.createElement('li');
+             const $checkBox = document.createElement('input');
+             const $type = document.createAttribute('type');
+             $type.value='checkbox';
+             $checkBox.setAttributeNode($type);
+
+            //  const $text = document.createTextNode(key);
+             
+
+             const record = `${i+1} ${value}`;
+             $li.textContent = record;
+             $bucketList.appendChild($li);
+             $bucketList.appendChild($checkBox);
+         }
+     </script>
+ </body>
+ </html>

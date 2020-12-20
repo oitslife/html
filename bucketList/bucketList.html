@@ -1,0 +1,59 @@
+<!-- 
+1. 버킷 생성, 추가, 이동
+2. storage 기술을 이요해서 오프라인 중에도 버킷 내용이 유지되도록 하기
+3. style 추가는 선택사항..!
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         ul{
+             padding-left: 0px;
+             list-style-type: none;}
+         span{
+             font-size: 1.5em;}
+     </style>
+ </head>
+ <body>
+     <h3>죽기 전에 해야할 버-킷-리-스-트</h3>
+     <hr>
+     버킷 리스트란 죽기 전에 꼭 한 번쯤은 해 보고 싶은 것들을 정리한 목록을 의미한다. 
+     <!-- <form> -->
+        <ul>
+            <li><label for="input"><span>입력</span> </label><input type="text" id='input'></li><br>
+            <li>
+                <button id='save'>저장</button>
+                <button id='list'>리스트 보기</button>
+                <button id='allDelete'>초기화</button>
+            </li>
+        </ul>
+     <!-- </form> -->
+
+     <script>
+         let $input = document.getElementById('input');
+         let $save = document.getElementById('save');
+         let $list = document.getElementById('list');
+         let $allDelete = document.getElementById('allDelete');
+
+         let cnt =1;
+        //저장하는 버튼
+        $save.addEventListener('click',()=>{
+            localStorage.setItem(cnt,$input.value);
+            cnt++;
+        });
+        //리스트 출력하는 버튼
+        $list.addEventListener('click',()=>{
+            window.open('bucketList1-1.html','bucketList','left=300, top=300, width=300, height=300,' )
+        });
+        //리스트 초기화
+        $allDelete.addEventListener('click',()=>{
+            console.log('모두 삭제하였습니다');
+            localStorage.clear();
+        });
+
+     </script>
+ </body>
+ </html>
